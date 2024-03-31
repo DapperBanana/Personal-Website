@@ -7,8 +7,8 @@ const fs = require('fs');
 
 const app = express();
 const options = {
-  key: fs.readFileSync('/private.key'),
-  cert: fs.readFileSync('/certificate.crt'),
+  key: fs.readFileSync('src/private.key'),
+  cert: fs.readFileSync('src/certificate.crt'),
 };
 const server = https.createServer(options, app);
 const wss = new WebSocket.Server({ server });
@@ -145,7 +145,7 @@ wss.on('connection', (ws, req) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 443; //443 for SSL
+const PORT = process.env.PORT || 3000; //443 for SSL
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

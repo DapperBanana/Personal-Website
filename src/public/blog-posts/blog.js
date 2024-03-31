@@ -1,7 +1,7 @@
 // Define function to fetch data from the provided URL
 async function fetchBlogLinks() {
     try {
-        const response = await fetch('http://localhost:3000/blogLinks');
+        const response = await fetch('https://austinlhoward.duckdns.org/blogLinks');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
