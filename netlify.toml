@@ -1,7 +1,6 @@
 # example netlify.toml
 [build]
-  command = "npm install"
-  command = "node src/index.js"
+  command = "npm install && node src/index.js"
   functions = "netlify/functions"
   publish = ""
 
