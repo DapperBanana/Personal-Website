@@ -1,0 +1,88 @@
+/* Not the main page so invert the night mode switch*/
+:root {
+    --invert-percentage: 100%;
+}
+
+
+.company-logos {filter: grayscale(100%) !important; transition: transform 0.3s;}
+.company-logos:hover {filter: grayscale(0%) !important; transform: scale(0.95);}
+
+.quick-breakdown {height: 10%; width: 60%;}
+
+.resume {display: flex; flex-direction: row; width: 100%;}
+.resume .resume-header {display: flex; flex-direction: column; position: sticky; top: 35%; z-index: 3; margin-right: 20px; height: 180px;}
+.resume .resume-body {display: flex; flex-direction: column;}
+.resume .resume-body h6 {text-align: center; font-size: 20px; margin-bottom: 10px;}
+.resume .resume-body .resume-block {box-shadow: 1px 1px 3px var(--drop-shadow); border-radius: var(--radius); margin: 3px; padding: 10px; align-items: center;}
+.resume .resume-body .resume-block img {width: 50%; margin-top: 15px; margin-left: auto; margin-right: auto; filter: invert(calc(100% - var(--invert-percentage)));}
+.resume .resume-body .resume-block p {padding-left: 10px; padding-right: 10px; padding-bottom: 10px; font-size: 15px;}
+.resume .resume-body .resume-block .company-info {text-align: center;}
+.resume .resume-body .resume-block .company-info .underline {margin-bottom: 3px;padding-bottom: 3px !important; border-bottom: 1px dotted var(--grey); margin-left: auto; margin-right: auto; width: 30%;}
+
+.resume .resume-body .resume-block .company-info .title {padding: 0px; font-weight: bold;}
+.resume .resume-body .resume-block .company-info .location {padding: 0px; text-align: center;}
+.resume .resume-body .resume-block .company-info .timeframe{padding: 0px; font-style: italic; font-size: 9px;}
+
+.social-media {position: sticky; top: 0; height: 20vh;}
+.dark-mode {position: sticky; top: 0;}
+.menu {position: sticky; top: 0; background-color: var(--light); opacity: 0.9; z-index: 1;}
+.information {position: sticky !important; top: 0;}
+.footer{background-color: var(--light); opacity: 0.9;}
+
+.center-text {text-align: center;}
+.center-text a {text-decoration: none; color: inherit; transition: color 0.3s;}
+.center-text a:hover {color: var(--yellow);}
+.center-text .title {font-size: 12px; font-style: italic;}
+.download {font-size: 12px; text-align: center; font-style: italic;}
+.resume-download {display: flex; flex-direction: row; justify-content: center; align-items: center; vertical-align: middle; padding: 0 10px 10px 10px; box-sizing: border-box; font-weight: 100; position: relative;}
+.resume-buttons{display: flex; justify-content: center; align-items: center; padding: 0 10px 10px 10px; box-sizing: border-box; font-weight: 100; z-index: 0;} 
+.resume-buttons a {text-decoration: none; color: inherit;}
+.resume-buttons p {position: relative; text-transform: uppercase; letter-spacing: 2px; padding: 5px; margin-left: 5px; margin-right: 5px; border: none; background-color: transparent; color: var(--passive-button-text); cursor: pointer; transition: color 0.5s; font-weight: lighter; font-size: 20px;}
+.resume-buttons p::before {content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: transparent; transition: width 0.5s ease, background-color 0.5s ease;}        
+.resume-buttons p:hover::before {width: 100%; background-color: var(--yellow);}
+.resume-buttons p:hover {color: var(--yellow);}     
+.resume-buttons p.selected::before {width: 100%; background-color: var(--yellow);}
+.resume-buttons p.selected {color: var(--yellow);}
+
+h4 {margin: 10px; font-weight: 500; font-size: 11px; border-bottom: 1px solid var(--dark); }
+a {text-decoration: none;}
+.popup-info {text-align: inherit; transition: max-height 0.5s ease;}
+.hidden {display: none;}    
+.container {width: 70%; height: auto; max-width: 1200px; margin: 0 auto; padding: 0px; display: flex; flex-wrap: wrap; justify-content: center; border-radius: var(--radius); box-shadow: 2px 2px 3px var(--drop-shadow); transition: 0.3s ease-in-out; margin-bottom: 10px;}
+.active {opacity: 1 !important;}
+.container:hover {opacity: 1; transition: 0.3s ease-in-out;}
+.professional {background-color: var(--yellow); color: var(--dark); opacity: 0.5;}
+.personal {background-color: var(--blue); opacity: 0.5;}
+.full-width{width: 90% !important;}
+
+.column {width: 100%; margin: 0; padding: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;}
+.column p {font-size: 9px; text-align: left; margin: 10px; justify-self: left; padding: 0 !important;}
+.column h1 {font-size: 9px; margin-top: 10px; margin-bottom: 0px; text-align: center; font-style: italic; font-weight: bold; color: var(--dark);}
+.column h3 {font-size: 9px; margin: 0px; text-align: center; font-style: italic; font-weight: 100; margin-bottom: 5px; color: var(--dark);}
+.column h5 {font-size: 7px; margin: 0px; text-align: left; font-style: italic; font-weight: 100;}
+.column img {max-width: 100%; height: auto; box-shadow: 2px 2px 3px var(--drop-shadow); border: 1px solid var(--dark); border-radius: var(--radius); margin: 10px; filter: invert(0%) !important;}
+
+.left-justify {text-align: left;}
+.small-text {font-size: 9px;}
+.right-column {width: 25%; margin-left: 2%;}
+.left-column {width: 25%; margin-right: 2%;}
+    
+.column img {order: 0; margin-top: 20px;}
+.footer{background-color: var(--light);}
+
+/* PILL ENCAPSULATIONS */
+.pill {padding-left: 10px; padding-right: 10px; padding-bottom: 10px; text-align: center;}
+.pill .pill-item {font-size: 7px; margin: 2px; padding: 0px; border-radius: 20px; width: auto; display: inline-block; background-color: var(--blue); color: var(--pill-text); box-shadow: 1px 1px 1px var(--drop-shadow);}
+.pill .pill-item p {padding-left: 10px !important; padding-right: 10px !important; padding-bottom: 0 !important; margin: 0 !important; font-weight: 100;}
+
+.role-and-outcome {display: flex; flex-direction: column; align-items: left; margin-left: 10px; margin-right: 10px; padding-top: 10px; width: auto; border-top: 1px dotted var(--dark);}
+.role-and-outcome .role {display: inline-block; margin: 0px; text-align: left; font-weight: 100; color: var(--dark);}
+.role-and-outcome .role p{margin: 0px; font-size: 8px !important;}
+.role-and-outcome .outcome {display: inline-block; margin: 0px; text-align: left; font-weight: 100; color: var(--dark);}
+.role-and-outcome .outcome p{margin: 0px; font-size: 8px !important;}
+
+@media (max-width: 870px) {
+    .resume {flex-direction: column;}
+    .resume .resume-header {position: relative;}
+    .container {flex-direction: column;}
+}

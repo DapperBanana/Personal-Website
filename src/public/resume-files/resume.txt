@@ -1,0 +1,154 @@
+Austin L. Howard
+Computer Engineer
+Calgary, Alberta 
+
+Phone: +1 587-581-8951 
+Email: contact@austinlhoward.com
+Website: austinlhoward.com
+
+Results-driven polymath with expertise in programming, database administration, and computer engineering. Adept at driving positive change through cross-functional collaboration and skilled in architectural analysis, CI/CD, reporting, cloud administration, change management, and application development.
+
+
+WORK EXPERIENCE:
+
+Heartland Generation
+Calgary, AB
+Business Analyst
+May 2022 – Present
+
+Projects:
+    - Operational Data Portal: In a team of 3, with the help of key field assets, we built a portal for Heartlands operations team both in the field and at head office. This website allowed the field to manually edit site specific fleet metrics, included a site approval chain for all edits, and even cleanse outage information that was automatically gathered from site-specific SCADA data. Meanwhile the site allowed head office to view PowerBI reports in-browser that pulled from all authorized and approved data in the data warehouse. As SAML SSO was enabled, each employee had a specific view that was tailored to their position within the company. All of this saving 1 Senior FTE resource worth of time and ensuring data integrity at every bend.
+    - Velocity Data Extraction Pipeline: I designed and built a data extraction pipeline utilizing web scraping, ODATA connectors, Azure Function Apps, and more for the operational MOC and incident tracking system (VelocityEHS), saving over $5k in annual data request and report improvement fees
+    - Front Office Finance Web App: I designed and, while managing a Jr. Developer, built Heartlands first Blazor web app with PowerBI integration and SAML SSO for the finance front office team, reducing report building time by an average of 4 days per month and creating the new template for all Blazor web apps to come
+    - Payroll Log Book Automation: I designed and built an end-to-end solution for payroll that included an Excel app for data entry, a SharePoint site for data hosting, and an Azure logic app for data ingestion and processing in order to automate field operation vehicle log book reporting; This resulted in a savings of over 1 full week of data processing every month for that team
+
+Data management and analysis are also at the core of my responsibilities. I specialize in SQL programming and database administration, ensuring the integrity and performance of our information systems. By creating Power BI dashboards for data visualization and utilizing web scraping techniques for data extraction, I enable data-driven decision-making and provide valuable insights for strategic planning. As a Business Analyst, I actively contribute to project management efforts, overseeing new and innovative ideas from an information systems perspective. Collaborating with cross-functional teams, I identify opportunities for process improvement and drive positive change throughout the organization, resulting in enhanced productivity and optimized business outcomes.
+
+Key Responsibilities: 
+· CI/CD Automation and Administration
+· Reporting 
+· Server Administration 
+· Database Administration 
+· Change Management 
+· Application Administration & IAM  
+· Architectural Analysis
+· Azure Administration
+· Web App Design and Development
+· Process Improvement
+
+ATB Financial
+Calgary, AB
+Systems Analyst IV	
+May 2021 – May 2022
+
+As a System Analyst within the Google Cloud Platform (GCP) at ATB Financial, I played a pivotal role in bridging communication between business representatives, project managers, project analysts, solution architects, and development team members. My responsibilities included identifying business requirements, creating system specifications, and presenting solutions using various technologies.
+
+Key Responsibilities: 
+· CI/CD Automation and Administration 
+· Server Administration 
+· Database Administration 
+· Change Management 
+· Application Administration & IAM  
+· Architectural Analysis
+· Salesforce Administration
+
+WBM Technologies
+Calgary, AB
+Infrastructure Analyst Consultant	
+Jan 2017 – May 2021
+
+During the first 2 years of my tenure at WBM I was promoted 4 times to my final position of Infrastructure Analyst Consultant. As a member of the Infrastructure Team at WBM I had the pleasure of being the sole liaison between WBM and Pembina for an entirely new managed service. While bringing a new quality and level of service to WBM’s accounts I was able to identify key business requirements and transform them into technical services
+
+Key Responsibilities: 
+· Ticket Management 
+· Documentation
+· Reporting 
+· Hybrid Server Administration 
+· Active Directory Administration 
+· Change Management 
+· Application Administration & IAM
+· End User Support
+· SCCM Administration
+
+SaskTel
+Regina, SK
+Advanced Technologies Assistant	
+Sep 2016 – Jan 2017
+
+Collaborated with an inspired team at SaskTel's IP division, delving into contemporary and legacy router technologies. Installed and troubleshooted Cisco and Alcatel routers, contributed to major projects involving server installations, executed bash scripts, and independently elevated problem-solving skills, broadening technical proficiency and strengthening networking concepts.
+
+Key Responsibilities: 
+· Ticket Management 
+· Reporting 
+· Server Administration 
+· Change Management 
+· Script Writing 
+· Architectural Analysis
+· PCB Production
+· Circuit Analysis
+· Embedded Programming
+
+RCMP
+Regina, SK
+Wireless Communications Engineer	
+May 2015 – Apr 2016
+
+As a Wireless Communications Technician at the Royal Canadian Mounted Police (RCMP), I played a key role in the repair and maintenance of Harris P25 radio towers in southern Saskatchewan. Utilizing expertise in radio frequency (RF) technologies, I diagnosed and resolved issues, ensuring seamless communication across federal government agencies. Additionally, I worked on resolving issues with radio towers, reverse engineered retired P25 base stations, and designed stations for optimal coverage in new locations.
+
+Key Responsibilities: 
+· Circuit Analysis 
+· Reporting 
+· Embedded Programming
+· Change Management 
+· Script Writing 
+· Architectural Analysis
+· RF Circuit Design
+· PCB Production
+
+
+EDUCATION:
+
+Saskatchewan Polytechnic - Regina, SK
+2014 – 2017
+4.0 GPA
+Computer Engineering Technology
+Graduated with Honors
+
+
+SKILLS:
+
+Technical Skills: 
+· C# (.NET 6 & 7) 
+· SQL 
+· Azure DevOps 
+· Azure Administration 
+· Python 
+· PowerShell 
+· Databricks 
+· VueJS 
+· Blazor 
+· ServiceNow 
+· Jira
+· Linux 
+· Git 
+· Octopus 
+· TeamCity 
+· Solarwinds
+
+Industry Knowledge: 
+· Alberta Electricity Market 
+· Instrumentation and Controls 
+· Microsoft Azure 
+· Oil Midstream  
+· FinTech 
+· Canadian ISP 
+· Radio Communications Technologies (analog and digital)
+
+Soft Skills: 
+· Leadership
+· Proficient in public speaking with over a decade of experience addressing large crowds and conducting group learning sessions on new technologies
+· Exceptionally quick learner
+· Effective communicator
+· Calm under pressure
+· Polymath with a very broad set of knowledge
+· Ability to distill technical speech into more easy-to-understand dialogue

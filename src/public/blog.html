@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <meta name="description" content="Austin L. Howard's personal website">
+  <meta name="keywords" content="Austin L. Howard, Austin Howard, Austin, Howard, Heartland Generation, Business Analyst, .NET, Azure, Blazor, web apps, projects, IS initiatives, whiskey, game demos, game jams, mountain biking, skateboarding, radio astronomy, SDR, prose">
+  <meta name="author" content="Austin L. Howard">
+
+  <title>Austin's Blog</title>
+
+  <link rel="icon" type="image/png" href="/assets/pretentious-headshot.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap">
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <link rel="stylesheet" href="/blog-posts/blog.css" type="text/css">
+</head>
+<body>
+  <div class="page">
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/austin-l-howard/" target="_blank"><img src="/assets/linkedin-logo.png" alt="Linkedin Logo"></a>
+      <a href="https://github.com/DapperBanana" target="_blank"><img src="/assets/github-logo.png" alt="Github Logo"></a>
+      <a href="https://hub.docker.com/u/dapperbanana" target="_blank"><img src="/assets/docker-logo.png" alt="Docker Logo"></a>
+      <a href="https://ko-fi.com/austinhoward" target="_blank"><img src="/assets/kofi-logo.png" alt="Ko-Fi Logo"></a>
+    </div>
+    <div class="information">
+      <div class="menu">
+        <div class="header">
+          <a href="/"><h1>Austin L. Howard</h1></a>
+        </div>
+        <div class="menu-buttons">
+          <a href="/about"><p>About</p></a>
+          <p class="selected">Blog</p>
+          <a href="/projects"><p>Projects</p></a>
+          <a href="/resume"><p>Resume</p></a>
+        </div>
+      </div>
+      <div class="content">
+        <div id="blog"></div>
+      </div>
+      <div class="footer">
+        <div class="value-tracker">
+          <p>Currently online:</p>
+          <span id="currently-online">0</span>
+        </div>
+        <div class="value-tracker">
+          <p>Total site visits:</p>
+          <span id="total-site-visits">0</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="dark-mode">
+      <a id="dark-mode-button">
+        <img src="/assets/switch.png" alt="dark mode switch">
+      </a>
+    </div>
+  </div>
+  <!-- Mouse pointer element -->
+  <div id="client-pointer"></div>
+  <script src="/script.js"></script>
+  <script src="/blog-posts/blog.js"></script>
+</body>
+</html>

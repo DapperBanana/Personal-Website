@@ -1,0 +1,146 @@
+const express = require('express');
+const routes = require('./routes/index.js');
+const https = require('http');
+const WebSocket = require('ws');
+const path = require('path');
+const fs = require('fs');
+
+const app = express();
+const server = https.createServer(app);
+const wss = new WebSocket.Server({ server });
+
+let clientCount = 0;
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
+
+
+// Mount the routes
+app.use('/', routes);
+
+// Serve blog links
+app.get('/blogLinks', (req, res) => {
+  const blogFolderPath = path.join(__dirname, '/public/blog-posts/');
+  fs.readdir(blogFolderPath, (err, files) => {
+    if (err) {
+      console.error('Error reading blog folder:', err);
+      res.status(500).send('Error reading blog folder');
+      return;
+    }
+
+    const blogLinks = [];
+    files.forEach(file => {
+      if (path.extname(file) === '.md') {
+        const title = getTitleFromMarkdownFile(path.join(blogFolderPath, file));
+        const year = getYearFromMarkdownFile(path.join(blogFolderPath, file));
+        const restOfDate = getRestOfDateFromMarkdownFile(path.join(blogFolderPath, file));
+        const link = `/blog-posts/${file}`;
+        blogLinks.push({ year, restOfDate, title, link });
+      }
+    });
+
+    res.json(blogLinks);
+  });
+});
+
+// Function to extract title from the first line of a Markdown file
+function getTitleFromMarkdownFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const lines = content.split('\n');
+    return lines[1].replace(/Title: (.*)/, '$1').trim();
+  } catch (error) {
+    console.error('Error reading Markdown file:', error);
+    return 'NotFound'; 
+  }
+}
+
+function getYearFromMarkdownFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const lines = content.split('\n');
+    const regex = /(?<=\/..\/).*$/gm;
+    const match = regex.exec(lines[0]);
+    if (match && match[0]) {
+      return match[0].trim();
+    } else {
+      return 'NotFound';
+    }
+  } catch (error) {
+    console.error('Error reading Markdown file:', error);
+    return 'NotFound'; 
+  }
+}
+
+function getRestOfDateFromMarkdownFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const lines = content.split('\n');
+    const regex = /(?<=Date: ).*(?=\/)/gm;
+    const match = regex.exec(lines[0]);
+    if (match && match[0]) {
+      return match[0].trim();
+    } else {
+      return 'NotFound';
+    }
+  } catch (error) {
+    console.error('Error reading Markdown file:', error);
+    return 'NotFound'; 
+  }
+}
+
+// Store connected clients' mouse positions
+const clients = new Map();
+
+// WebSocket connection handler
+wss.on('connection', (ws, req) => {
+  console.log('Client connected');
+  clientCount++;
+  const clientIP = req.connection.remoteAddress;
+  console.log(`Client connected from IP: ${clientIP}`);
+  // Handle incoming messages (mouse position data)
+  ws.on('message', (data) => {
+    
+    const {userId, x, y } = JSON.parse(data);
+    clients.set(ws, { userId, x, y });
+    
+    // Broadcast updated mouse positions to all clients
+    broadcastPositions(data);
+  });
+
+  // Handle client disconnection
+  ws.on('close', () => {
+    clientCount--;
+    clients.delete(ws);
+    
+    // Broadcast updated mouse positions to all clients
+    broadcastPositions();
+    broadcastClientCount();
+  });
+
+  // Function to broadcast mouse positions to all clients
+  function broadcastPositions(data) {
+    const positions = Array.from(clients.values()); // Get values from Map
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(JSON.stringify(positions));
+      }
+    });
+  }  
+  function broadcastClientCount() {
+    wss.clients.forEach((client) => {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(JSON.stringify({ type: 'clientCount', count: clientCount }));
+      }
+    });
+  }
+  // Initial broadcast of mouse positions to the newly connected client
+  broadcastPositions();
+  broadcastClientCount();
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

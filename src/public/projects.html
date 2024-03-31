@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Austin L. Howard's personal website">
+  <meta name="keywords" content="Austin L. Howard, Austin Howard, Austin, Howard, Heartland Generation, Business Analyst, .NET, Azure, Blazor, web apps, projects, IS initiatives, whiskey, game demos, game jams, mountain biking, skateboarding, radio astronomy, SDR, prose">
+  <meta name="author" content="Austin L. Howard">
+
+  <title>Austin's Projects</title>
+
+  <link rel="icon" type="image/png" href="/assets/pretentious-headshot.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="/project-info/project.css" type="text/css">
+  <script async="" src="https://unpkg.com/@codersrank/summary/codersrank-summary.min.js"></script>
+  <script async="" src="https://unpkg.com/@codersrank/activity/codersrank-activity.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/austin-l-howard/" target="_blank"><img src="/assets/linkedin-logo.png" alt="Linkedin Logo"></a>
+        <a href="https://github.com/DapperBanana" target="_blank"><img src="/assets/github-logo.png" alt="Github Logo"></a>
+        <a href="https://hub.docker.com/u/dapperbanana" target="_blank"><img src="/assets/docker-logo.png" alt="Docker Logo"></a>
+        <a href="https://ko-fi.com/austinhoward" target="_blank"><img src="/assets/kofi-logo.png" alt="Ko-Fi Logo"></a>
+    </div>
+    <div class="information">
+      <div class="menu">
+        <div class="header">
+            <a href="/"><h1>Austin L. Howard</h1></a>
+        </div>
+        <div class="menu-buttons">
+          <a href="/about"><p>About</p></a>
+          <a href="/blog"><p>Blog</p></a>
+          <p class="selected">Projects</p>
+          <a href="/resume"><p>Resume</p></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="spacer"></div>
+        <h4 style="font-size: large;">Welcome to my personal project page!</h4>
+        <div class="spacer"></div>
+        <p>
+            Trust me, I know... It's a weird assortment of projects. I've tried to keep the list short though there are tiny little projects
+            I take on all of the time. You'll notice the list is all over the place, but so am I so it's fitting that you'll find web design 
+            side by SDR projects and low level programming.
+        </p>
+        <div class="spacer"></div>
+        <p>
+            Hopefully there's something that peaks your interest and never forget to reach out if you want to chat about anything!
+        </p>
+        <div class="spacer"></div>
+        <img src="/project-info/me-working.gif" alt="Me working?" class="image-gif">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <h4 style="font-size: large;">Onto the good stuff...</h4>
+        <div class="spacer"></div>
+        <p>
+            Now as any good programmer will tell you... We have ego's and need them constantly validated. As such please enjoy my proof that I 
+            contribute to GitHub (very important).
+        </p>
+        <div class="spacer"></div>
+        <img id="github-contributions" src="https://ghchart.rshah.org/092327/DapperBanana.svg" alt="github-contibutions">
+        <div class="spacer"></div>
+        <p>
+            And if me contributing constantly to GitHub isn't enough for you, here's a CodersRank summary of me as a developer. As they are the
+            definitive spot on the internet (who doesn't wake up and immediately check their ranking?) you can clearly see that I am amazing.
+            Ignore the fact that I'm not the best at anything and that top percentile becomes a lot more impressive.
+        </p>
+        <div class="spacer"></div>
+        <codersrank-summary username="DapperBanana" branding="false" style="height: 182px;" class="image-gif-large"></codersrank-summary>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <p>
+            I know... I know... You're expecting actual projects that I've worked on. Reluctantly, here are a couple of projects, some findings,
+            and some things I've been working on. I hope you find something that interests you and if you do, please <a href="mailto:contact@austinlhoward.com">reach out</a>!
+        </p>
+        <div class="spacer"></div>
+        <div class="personal-projects">
+            <div id="sdr" class="container personal small-img" onclick="toggleContent(this)">
+                <div class="column left-column">
+                    <img src="/project-info/sdr-basics.gif" alt="Basic SDR GIF">
+                </div>
+                <div class="column left-justify small-text">
+                    <h1>
+                        SDR Projects
+                    </h1>
+                    <a href="https://github.com/DapperBanana">
+                        <h3>
+                            Github Repo
+                        </h3>
+                    </a>
+                    <h5>
+                        Tech Stack: SDR, Python, C++, RF Design
+                    </h5>
+                    <div class="popup-info hidden">
+                        <p>
+                            So you have an interest in radio... You've come to the right place. The wild world of analog first caught my
+                            interest when I was but a wee lad. Ever since then I've hoped and dreamed for a job where I can use some of 
+                            the creativity and flexibility seen in analog tech. Alas, I had one job that dealt with radio communications
+                            and the rest have been slowly pushing me into software/data engineering so this has become a hobby for me.
+                        </p>
+                        <p>
+                            After finding out about SDR a number of years ago I've slowly been growing my antennas (both homemade and 
+                            pre-built). this has allowed me to work on a number of projects, whether it be the starters like finding 
+                            radio stations, intercepting air traffic controller communication, following active flights in my area, intercepting 
+                            local emergency service communications, and then even to more recent projects like trying to read unencrypted
+                            P25 communications, radio-photography through GOES satellites, and even trying my hand at creating a weather 
+                            database pipeline using NOAA satellites.
+                        </p>
+                        <p>
+                            There's always something to do with SDR and please reach out if you want to nerd out over frequencies, I truly
+                            do find this one of the most interesting subjects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer" style="height: 20px;"></div>
+    
+            <div id="discord-roguelike" class="container personal small-img" onclick="toggleContent(this)">
+                <div class="column left-justify small-text">
+                    <h1>
+                        Discord Roguelike
+                    </h1>
+                    <a href="https://github.com/DapperBanana">
+                        <h3>
+                            Github Repo
+                        </h3>
+                    </a>
+                    <h5>
+                        Tech Stack: Python, Discord API
+                    </h5>
+                    <div class="popup-info hidden">
+                        <p>
+                            While sitting at home during the pandemic I was struggling to find a good project to sit down and do. After a bit
+                            of hum and haw I finally landed on making a game... In Discord. This was also BEFORE they announced they were going 
+                            to make full fledged games inside of Discord so it seemed somewhat original since I couldn't find a single example 
+                            of what I was doing. After some deliberating I decided I wanted full audio support for a complete roguelike experience
+                            inside of a channel.
+                        </p>
+                        <p>
+                            The backend of this is largely the same as a normal project, you create your random dungeon, you spawn the creatures 
+                            and the treasure, you set your goal, and you're off to the races. I added a couple more things like a boss on level 10,
+                            attribute leveling, weapons, and a 5e based RNG combat system. It came together fairly nicely, the only tricky thing
+                            was dealing with Discord. I needed to have it so that other people couldn't screw you over in chat, if multiple people
+                            wanted to play I needed profiles with saves, and I also needed a timeout in case someone left discord for the day and 
+                            someone else decided they wanted to grind a bit.
+                        </p>
+                        <p>
+                            All in all I think it took me a couple months to get the first version done which worked pretty well. Ever since then I
+                            jump into the code base to clean it up, add some new features, fix some bugs, and try to make it run a bit better. It's 
+                            not perfect, and I definitely break it more than anything else, but it was a fun project and a good way to learn some 
+                            python that I otherwise wouldn't have known.
+                        </p>
+                    </div>
+                </div>
+                <div class="column right-column">
+                    <img src="/project-info/discord-roguelike.gif" alt="Catacombs Screenshot">
+                </div>
+            </div>
+            <div class="spacer" style="height: 20px;"></div>
+    
+            <div id="nes-emulator" class="container personal small-img" onclick="toggleContent(this)">
+                <div class="column left-column">
+                    <img src="/project-info/NES-Emulator.gif" alt="NES Emulator GIF">
+                </div>
+                <div class="column left-justify small-text">
+                    <h1>
+                        NES Emulator
+                    </h1>
+                    <a href="https://github.com/DapperBanana">
+                        <h3>
+                            Github Repo
+                        </h3>
+                    </a>
+                    <h5>
+                        Tech Stack: C++, SDL2
+                    </h5>
+                    <div class="popup-info hidden">
+                        <p>
+                            This is a relatively recent one! 
+                        </p>
+                        <p>
+                            I don't have much to say about this one other than so far it's been awesome to go back to my roots and deal with some 
+                            low level learning. Dealing with 6502 architecture is a ton of fun and I'm looking forward to implementing some
+                            emulator features once I can get some of the more complex parts of the NES done.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="spacer" style="height: 20px;"></div>
+    
+            <div id="lox-implementation" class="container personal small-img" onclick="toggleContent(this)">
+                <div class="column left-justify small-text">
+                    <h1>
+                        Lox Implementation
+                    </h1>
+                    <a href="https://github.com/DapperBanana">
+                        <h3>
+                            Github Repo
+                        </h3>
+                    </a>
+                    <h5>
+                        Tech Stack: C, Java
+                    </h5>
+                    <div class="popup-info hidden">
+                        <p>
+                            Ahhh lox. I remember reading Robert Nystroms "Game Design Patterns" book when I was in college and falling in love 
+                            with his style (don't look at me like that, it's not weird...). When I started reading his "Crafting Interpreters"
+                            bible I couldn't put it down. Something that I never knew I was interested in all of a sudden just clicked and I 
+                            knew I had to try to make this.
+                        </p>
+                        <p>
+                            Crafting an interpreter that someone else is showing you STEP BY STEP how to create... Is still hard. It took me 
+                            far too long to understand some of the concepts he was talking about. This is also WITH experience doing exactly
+                            what he's trying to teach me. Some CS concepts are just hard to grasp (might also just be me). Regardless with some 
+                            serious work and probably too many hours, I finished my Java implementation and immediately got started on his final 
+                            implementation: C.
+                        </p>
+                        <p>
+                            I think I had a lot more fun in C than I did with Java, in part to me enjoying the language more. While no one really 
+                            fully understands C it feels more at home to an embedded programmer like myself. Anyways, I could chat about my 
+                            struggles, triumphs, and joys with this book (and I still might one day) but for now I'll just say: "Go read it!"
+                        </p>
+                    </div>
+                </div>
+                <div class="column right-column">
+                    <img src="/project-info/Crafting-Interpreters.gif" alt="Crafting Interpreters Book GIF">
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+      </div>
+      <div class="footer">
+        <div class="value-tracker">
+          <p>Currently online:</p>
+          <span id="currently-online">0</span>
+        </div>
+        <div class="value-tracker">
+          <p>Total site visits:</p>
+          <span id="total-site-visits">0</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="dark-mode">
+        <a id="dark-mode-button">
+          <img src="/assets/switch.png" alt="dark mode switch">
+        </a>
+      </div>
+  </div>
+  <!-- Mouse pointer element -->
+  <div id="client-pointer"></div>
+  <script src="script.js"></script>
+  <script src="/project-info/project.js"></script>
+</body>
+</html>
