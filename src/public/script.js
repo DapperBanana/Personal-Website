@@ -5,7 +5,7 @@ let clientX, clientY;
 let lastSentX, lastSentY;
 let serverPositions;
 
-const ws = new WebSocket('ws://localhost:3000');
+const ws = new WebSocket('wss://austinlhoward.duckdns.org');
 const userId = generateUserID(); // Unique user ID
 const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
 const root = document.documentElement;

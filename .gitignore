@@ -1,2 +1,3 @@
-# Local Netlify folder
-.netlify
+# Use for git ignore if anything
+*.key
+*.crt
