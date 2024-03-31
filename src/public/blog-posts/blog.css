@@ -10,10 +10,10 @@ body {background-color: var(--light); color: var(--dark); font-family: 'Inconsol
   .fullYear {transition: 0.2s ease-in-out; opacity: 0.5;transform: translateX(12%); justify-content: center; width: 80%;display: flex; box-shadow: 2px 2px 3px var(--drop-shadow);border-radius: var(--radius); }
   .fullYear:hover {opacity: 1; transition: 0.2s ease-in-out; background-color: var(--yellow);}
     .left-column {width: 20%; flex-direction: column;}
-      h3 {color: var(--dark); font-weight: 100; margin: 8px; font-size: 12px; font-family: Arial, Helvetica, sans-serif;}
+      h3 {color: var(--dark); font-weight: 100; margin: 20px; font-size: 12px; font-family: Arial, Helvetica, sans-serif;}
     .right-column {flex: 1; z-index: 2;}
       .post {display: flex; flex-direction: row; align-items: center; margin: 3px;}
-        .post h2 {font-size: 12px; font-weight: 100; margin: 5px; margin-left: 20px;transition: 0.3s ease-in-out;}
+        .post h2 {font-size: 20px; font-weight: 100; margin: 5px; margin-left: 20px;transition: 0.3s ease-in-out;}
         .post h2:hover {color: var(--light); transition: 0.3s ease-in-out; background-color: var(--yellow); border-radius: var(--radius); padding: 3px; transform: scale(2);box-shadow: 2px 2px 3px var(--drop-shadow);}
         .post a {color: var(--dark); text-decoration: none;}
-        .post p {font-family:Arial, Helvetica, sans-serif;font-size: 5px; font-weight: 100; margin: 2px; color: var(--grey)}
+        .post p {font-family:Arial, Helvetica, sans-serif;font-size: 10px; font-weight: 100; margin: 2px; color: var(--grey)}

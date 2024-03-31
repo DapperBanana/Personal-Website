@@ -101,7 +101,8 @@ const clients = new Map();
 wss.on('connection', (ws, req) => {
   console.log('Client connected');
   clientCount++;
-  const clientIP = req.connection.remoteAddress;
+  let clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  clientIP = clientIP.split(',')[0].trim();
   console.log(`Client connected from IP: ${clientIP}`);
   // Handle incoming messages (mouse position data)
   ws.on('message', (data) => {
