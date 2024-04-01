@@ -77,9 +77,9 @@ a {text-decoration: none;}
 
 .role-and-outcome {display: flex; flex-direction: column; align-items: left; margin-left: 10px; margin-right: 10px; padding-top: 10px; width: auto; border-top: 1px dotted var(--dark);}
 .role-and-outcome .role {display: inline-block; margin: 0px; text-align: left; font-weight: 100; color: var(--dark);}
-.role-and-outcome .role p{margin: 0px; font-size: 8px !important;}
+.role-and-outcome .role p{margin: 0px; font-size: 13px !important;}
 .role-and-outcome .outcome {display: inline-block; margin: 0px; text-align: left; font-weight: 100; color: var(--dark);}
-.role-and-outcome .outcome p{margin: 0px; font-size: 8px !important;}
+.role-and-outcome .outcome p{margin: 0px; font-size: 13px !important;}
 
 @media (max-width: 870px) {
     .resume {flex-direction: column;}

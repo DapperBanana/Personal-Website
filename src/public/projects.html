@@ -78,157 +78,359 @@
             and some things I've been working on. I hope you find something that interests you and if you do, please <a href="mailto:contact@austinlhoward.com">reach out</a>!
         </p>
         <div class="spacer"></div>
-        <div class="personal-projects">
-            <div id="sdr" class="container personal small-img" onclick="toggleContent(this)">
-                <div class="column left-column">
-                    <img src="/project-info/sdr-basics.gif" alt="Basic SDR GIF">
-                </div>
-                <div class="column left-justify small-text">
-                    <h1>
-                        SDR Projects
-                    </h1>
-                    <a href="https://github.com/DapperBanana">
-                        <h3>
-                            Github Repo
-                        </h3>
-                    </a>
-                    <h5>
-                        Tech Stack: SDR, Python, C++, RF Design
-                    </h5>
-                    <div class="popup-info hidden">
-                        <p>
-                            So you have an interest in radio... You've come to the right place. The wild world of analog first caught my
-                            interest when I was but a wee lad. Ever since then I've hoped and dreamed for a job where I can use some of 
-                            the creativity and flexibility seen in analog tech. Alas, I had one job that dealt with radio communications
-                            and the rest have been slowly pushing me into software/data engineering so this has become a hobby for me.
-                        </p>
-                        <p>
-                            After finding out about SDR a number of years ago I've slowly been growing my antennas (both homemade and 
-                            pre-built). this has allowed me to work on a number of projects, whether it be the starters like finding 
-                            radio stations, intercepting air traffic controller communication, following active flights in my area, intercepting 
-                            local emergency service communications, and then even to more recent projects like trying to read unencrypted
-                            P25 communications, radio-photography through GOES satellites, and even trying my hand at creating a weather 
-                            database pipeline using NOAA satellites.
-                        </p>
-                        <p>
-                            There's always something to do with SDR and please reach out if you want to nerd out over frequencies, I truly
-                            do find this one of the most interesting subjects.
-                        </p>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    This Website!
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: HTML/CSS/JS, Docker, Windows 11, Github Actions
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/personal-website.gif" alt="Website GIF">
+                    <h4>Description:</h4>
+                    <p>
+                    After seeing some other personal website projects I wanted to modernize my own. I had a couple of goals in mind when I started
+                        this project. I wanted to make sure that I could easily maintain the site, that I could easily add blog posts in, that I could
+                        include some sort of interactivity, and most importantly that I could host it on my own server.
+                    </p>
+                    <p>
+                    Locally hosting is always tricky, but I like the challenge some times. As I already owned the domain, I figured I could just
+                        create a powershell script to automate the A record changes and then use certbot to get a free SSL certificate. After that I
+                        just needed to create a docker container that would host the site and I could easily update it with a github action whenever
+                        I wanted to make some changes.
+                    </p>
+                    <p>
+                    While this is definitley not a perfect website, and I'll be making continuous changes as time goes on, I'm happy with the result
+                        and I think it's a good representation of my skills and interests. I hope you enjoy it as well!
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Everything?
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>I got a cool website!
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: $0 if you don't count my time!</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>HTML/CSS</p></div>
+                        <div class="pill-item"><p>Node.JS</p></div>
+                        <div class="pill-item"><p>Express.JS</p></div>
+                        <div class="pill-item"><p>PowerShell</p></div>
+                        <div class="pill-item"><p>Windows Task Scheduler</p></div>
+                        <div class="pill-item"><p>Docker</p></div>
+                        <div class="pill-item"><p>Github Actions</p></div>
+                        <div class="pill-item"><p>GoDaddy</p></div>
+                        <div class="pill-item"><p>Let's Encrypt/Certbot</p></div>
+                        <div class="pill-item"><p>Windows 11</p></div>
                     </div>
                 </div>
             </div>
-            <div class="spacer" style="height: 20px;"></div>
-    
-            <div id="discord-roguelike" class="container personal small-img" onclick="toggleContent(this)">
-                <div class="column left-justify small-text">
-                    <h1>
-                        Discord Roguelike
-                    </h1>
-                    <a href="https://github.com/DapperBanana">
-                        <h3>
-                            Github Repo
-                        </h3>
-                    </a>
-                    <h5>
-                        Tech Stack: Python, Discord API
-                    </h5>
-                    <div class="popup-info hidden">
-                        <p>
-                            While sitting at home during the pandemic I was struggling to find a good project to sit down and do. After a bit
-                            of hum and haw I finally landed on making a game... In Discord. This was also BEFORE they announced they were going 
-                            to make full fledged games inside of Discord so it seemed somewhat original since I couldn't find a single example 
-                            of what I was doing. After some deliberating I decided I wanted full audio support for a complete roguelike experience
-                            inside of a channel.
-                        </p>
-                        <p>
-                            The backend of this is largely the same as a normal project, you create your random dungeon, you spawn the creatures 
-                            and the treasure, you set your goal, and you're off to the races. I added a couple more things like a boss on level 10,
-                            attribute leveling, weapons, and a 5e based RNG combat system. It came together fairly nicely, the only tricky thing
-                            was dealing with Discord. I needed to have it so that other people couldn't screw you over in chat, if multiple people
-                            wanted to play I needed profiles with saves, and I also needed a timeout in case someone left discord for the day and 
-                            someone else decided they wanted to grind a bit.
-                        </p>
-                        <p>
-                            All in all I think it took me a couple months to get the first version done which worked pretty well. Ever since then I
-                            jump into the code base to clean it up, add some new features, fix some bugs, and try to make it run a bit better. It's 
-                            not perfect, and I definitely break it more than anything else, but it was a fun project and a good way to learn some 
-                            python that I otherwise wouldn't have known.
-                        </p>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    Home Automation
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: HTML/CSS/JS, Docker, Github Actions, Home Assistant
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/powershell.gif" alt="PowerShell GIF">
+                    <h4>Description:</h4>
+                    <p>
+                    Recently in 2023 I bought my first house. I was excited to finally have a place to call my own and I wanted to make sure that
+                        I could automate as much as possible. I started with the basics, I wanted to be able to turn on and off my lights, I wanted
+                        to be able to control my thermostat, and I wanted to be able to have hubs around the house (as well as an app of some sort)
+                        that would allow me to control everything. Preferably everything in the house would be locally hosted though that's quite 
+                        hard to do these days so I thought we'd just try to limit the amount of externally connected devices (within reason). Above
+                        all though, everything needed to be done safely, securely, and had to meet the "wife test".
+                    </p>
+                    <p>
+                    In order to even start most of this a lot of the electrical needed to be redone. So after tearing down drywall, rewiring the house
+                        and installing new switches, I was finally ready to start the automation process. Using Home Assistant as a base I was able to
+                        get most of the automation done fairly quickly. I was able to control my lights, my thermostat, and my hubs all from one place.
+                    </p>
+                    <p>
+                        Using some strategically placed old iPads, Ubiquiti AP's (and cameras), and some custom built hubs I was able to get the house
+                        up and running in no time. I even had a couple of friends over to test it out and they were impressed. I'm still working on
+                        some of the more advanced features, but I'm happy with the result so far. I've even made it externally available so we can check
+                        in on the house while away.
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Wife Acceptance Testing
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>Even my wife likes it!
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: Oof, $10,000? Somewhere around there</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="column right-column">
-                    <img src="/project-info/discord-roguelike.gif" alt="Catacombs Screenshot">
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>HTML/CSS/JS</p></div>
+                        <div class="pill-item"><p>Home Assistant</p></div>
+                        <div class="pill-item"><p>Tuya</p></div>
+                        <div class="pill-item"><p>Ubiquiti Unifi Security</p></div>
+                        <div class="pill-item"><p>Ubiquiti Networking</p></div>
+                        <div class="pill-item"><p>Docker</p></div>
+                        <div class="pill-item"><p>Github Actions</p></div>
+                        <div class="pill-item"><p>GoDaddy</p></div>
+                        <div class="pill-item"><p>Let's Encrypt/Certbot</p></div>
+                        <div class="pill-item"><p>Windows Server 2019</p></div>
+                        <div class="pill-item"><p>Synology NAS</p></div>
+                    </div>
                 </div>
             </div>
-            <div class="spacer" style="height: 20px;"></div>
-    
-            <div id="nes-emulator" class="container personal small-img" onclick="toggleContent(this)">
-                <div class="column left-column">
-                    <img src="/project-info/NES-Emulator.gif" alt="NES Emulator GIF">
-                </div>
-                <div class="column left-justify small-text">
-                    <h1>
-                        NES Emulator
-                    </h1>
-                    <a href="https://github.com/DapperBanana">
-                        <h3>
-                            Github Repo
-                        </h3>
-                    </a>
-                    <h5>
-                        Tech Stack: C++, SDL2
-                    </h5>
-                    <div class="popup-info hidden">
-                        <p>
-                            This is a relatively recent one! 
-                        </p>
-                        <p>
-                            I don't have much to say about this one other than so far it's been awesome to go back to my roots and deal with some 
-                            low level learning. Dealing with 6502 architecture is a ton of fun and I'm looking forward to implementing some
-                            emulator features once I can get some of the more complex parts of the NES done.
-                        </p>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    Discord Roguelike Bot
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: Python, Discord API
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/discord-roguelike.gif" alt="Catacombs GIF">
+                    <h4>Description:</h4>
+                    <p>
+                        While sitting at home during the pandemic I was struggling to find a good project to sit down and do. After a bit
+                        of hum and haw I finally landed on making a game... In Discord. This was also BEFORE they announced they were going 
+                        to make full fledged games inside of Discord so it seemed somewhat original since I couldn't find a single example 
+                        of what I was doing. After some deliberating I decided I wanted full audio support for a complete roguelike experience
+                        inside of a channel.
+                    </p>
+                    <p>
+                        The backend of this is largely the same as a normal project, you create your random dungeon, you spawn the creatures 
+                        and the treasure, you set your goal, and you're off to the races. I added a couple more things like a boss on level 10,
+                        attribute leveling, weapons, and a 5e based RNG combat system. It came together fairly nicely, the only tricky thing
+                        was dealing with Discord. I needed to have it so that other people couldn't screw you over in chat, if multiple people
+                        wanted to play I needed profiles with saves, and I also needed a timeout in case someone left discord for the day and 
+                        someone else decided they wanted to grind a bit.
+                    </p>
+                    <p>
+                        All in all I think it took me a couple months to get the first version done which worked pretty well. Ever since then I
+                        jump into the code base to clean it up, add some new features, fix some bugs, and try to make it run a bit better. It's 
+                        not perfect, and I definitely break it more than anything else, but it was a fun project and a good way to learn some 
+                        python that I otherwise wouldn't have known.
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Project Management
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>Was able to make a fun game for my friends and I to play on Discord!
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: My sanity</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>Python</p></div>
+                        <div class="pill-item"><p>Discord API</p></div>
+                        <div class="pill-item"><p>PowerShell</p></div>
+                        <div class="pill-item"><p>Github Actions</p></div>
                     </div>
                 </div>
-                
             </div>
-            <div class="spacer" style="height: 20px;"></div>
-    
-            <div id="lox-implementation" class="container personal small-img" onclick="toggleContent(this)">
-                <div class="column left-justify small-text">
-                    <h1>
-                        Lox Implementation
-                    </h1>
-                    <a href="https://github.com/DapperBanana">
-                        <h3>
-                            Github Repo
-                        </h3>
-                    </a>
-                    <h5>
-                        Tech Stack: C, Java
-                    </h5>
-                    <div class="popup-info hidden">
-                        <p>
-                            Ahhh lox. I remember reading Robert Nystroms "Game Design Patterns" book when I was in college and falling in love 
-                            with his style (don't look at me like that, it's not weird...). When I started reading his "Crafting Interpreters"
-                            bible I couldn't put it down. Something that I never knew I was interested in all of a sudden just clicked and I 
-                            knew I had to try to make this.
-                        </p>
-                        <p>
-                            Crafting an interpreter that someone else is showing you STEP BY STEP how to create... Is still hard. It took me 
-                            far too long to understand some of the concepts he was talking about. This is also WITH experience doing exactly
-                            what he's trying to teach me. Some CS concepts are just hard to grasp (might also just be me). Regardless with some 
-                            serious work and probably too many hours, I finished my Java implementation and immediately got started on his final 
-                            implementation: C.
-                        </p>
-                        <p>
-                            I think I had a lot more fun in C than I did with Java, in part to me enjoying the language more. While no one really 
-                            fully understands C it feels more at home to an embedded programmer like myself. Anyways, I could chat about my 
-                            struggles, triumphs, and joys with this book (and I still might one day) but for now I'll just say: "Go read it!"
-                        </p>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    NES Emulator
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: C++
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/nes-emulator.gif" alt="NES Emulator GIF">
+                    <h4>Description:</h4>
+                    <p>
+                        A little bit ago I started working on an NES emulator. I've always been interested in low level programming and I thought
+                        this would be a good way to keep flexing some of those muscles. I started with the basics, I decided I'd build a 
+                        frame-accurate emulator and emulate the system hardware instead of translating.
+                    </p>
+                    <p>
+                        While this is a currently ongoing project I've made some good progress. I've been able to get the CPU working, start on the BUS,
+                        and locally even get some of the PPU logic working.
+                    </p>
+                    <p>
+                        This project will take me quite a while but I'm happy for all of the documentation that's floating around there as I don't know
+                        I'd have the patience to soft through some of the original architecture in my spare time these days. All of that being said though
+                        I'm excited to make some more progress and see where this project goes.
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Everything?
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>Project ongoing, no real outcome yet.
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: Hours of my time</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>C++</p></div>
                     </div>
                 </div>
-                <div class="column right-column">
-                    <img src="/project-info/Crafting-Interpreters.gif" alt="Crafting Interpreters Book GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    P25 SDR Decoder
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: C++, Python, RTL-SDR, P25
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/sdr-p25.gif" alt="P25 SDR GIF">
+                    <h4>Description:</h4>
+                    <p>
+                        I've always been interested in radio and radio astronomy. I've been playing around with SDR's for a while now and I thought
+                        it would be fun to try and decode some P25 signals. I started with the basics, I wanted to be able to decode some local police
+                        chatter and see if I could get some of the data to display on a screen.
+                    </p>
+                    <p>
+                        While this is a currently ongoing project I've made some good progress. I've been able to get the SDR working, start on the
+                        P25 decoding, and locally even get some of the data to display on a screen.
+                    </p>
+                    <p>
+                        It's been fun to return to some of my roots and play around in the trunked radio space like I used to. I'm excited to make some
+                        more progress and see where this project goes.
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Everything?
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>Peeping on some local police chatter!
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: $100-$300</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>C++</p></div>
+                        <div class="pill-item"><p>Python</p></div>
+                        <div class="pill-item"><p>RTL-SDR</p></div>
+                        <div class="pill-item"><p>GNU Radio</p></div>
+                        <div class="pill-item"><p>SDR#</p></div>
+                        <div class="pill-item"><p>Windows 11</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div id="heartland-ops-portal" class="container professional" onclick="toggleContent(this)">
+            <div class="column left-justify small-text">
+                <h1>
+                    Radio Astronomy & GOES Imagery
+                </h1>
+                <a href="https://github.com/DapperBanana">
+                    <h3>
+                        Github Repo
+                    </h3>
+                </a>
+                <h5>
+                    Tech Stack: Airspy, SDR#, GOES Satellite
+                </h5>
+                <div class="popup-info hidden">
+                    <img src="/project-info/goes-sattellite.gif" alt="P25 SDR GIF">
+                    <h4>Description:</h4>
+                    <p>
+                        Since I got into the SDR space I have always wanted to gather some radio astronomy data. I've been playing around with
+                        some of the local radio astronomy clubs and I thought it would be fun to try and get some GOES imagery. I started with the
+                        basics, I wanted to be able to get some of the local weather data and see if I could get some of the imagery to display on
+                        a screen.
+                    </p>
+                    <p>
+                        While this is a currently ongoing project I've made some good progress. I've been able to get the SDR working, start on the
+                        GOES decoding, and locally even get some of the data to display on a screen.
+                    </p>
+                    <div class="role-and-outcome">
+                        <div class="role">
+                            <p>
+                            <span style="font-size: 12px;">Key Responsibillities: </span>Development | Documentation | Everything?
+                            </p>
+                        </div>
+                        <div class="outcome">
+                            <p>
+                            <span style="font-size: 12px;">Project Outcome: </span>The ability to say "my camera is a satellite"
+                            </p>
+                            <p>
+                            <span style="font-style: italic;">Est. cost: $2,000 and counting</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Technologies Used:</h4>
+                    <div class="pill">
+                        <div class="pill-item"><p>Airspy</p></div>
+                        <div class="pill-item"><p>SDR#</p></div>
+                        <div class="pill-item"><p>GOES Satellite</p></div>
+                        <div class="pill-item"><p>GNU Radio</p></div>
+                        <div class="pill-item"><p>Windows 11</p></div>
+                    </div>
                 </div>
             </div>
         </div>
