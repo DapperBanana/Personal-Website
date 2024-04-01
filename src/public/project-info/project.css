@@ -9,7 +9,7 @@
 .content h3:hover {color: var(--yellow); border-bottom: 1px dotted var(--yellow);}
 .image-gif {height: auto;width: 200px; margin-left: auto; margin-right:auto; box-shadow: 2px 2px 3px var(--drop-shadow); border-radius: var(--radius);}
 .image-gif-large {height: auto !important; width: 80%; margin-left: auto; margin-right:auto; box-shadow: 2px 2px 3px var(--drop-shadow); border-radius: var(--radius);}
-h4 {margin-top: 50px; font-weight: 500; font-size: 35px; margin: 5px;}
+h4 {margin: 10px; font-weight: 500; font-size: 11px; border-bottom: 1px solid var(--dark); }
 a {text-decoration: none;}
 .popup-info {text-align: inherit; transition: max-height 0.5s ease;}
 .column .popup-info img {width: 50%; margin-top: 15px; margin-left: auto; margin-right: auto; filter: invert(calc(100% - var(--invert-percentage)));}
@@ -23,7 +23,7 @@ a {text-decoration: none;}
 .personal {background-color: var(--blue); opacity: 0.5;}
 .small-img{width: auto; height: auto;}
 
-.column {width: 70%; margin: 0; padding: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.column {width: 100%; margin: 0; padding: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center;}
 .column p {font-size: 15px; text-align: left; margin: 10px; justify-self: left;}
 .column h1 {font-size: 15px; margin-top: 10px; margin-bottom: 0px; text-align: center; font-style: italic; font-weight: bold; color: var(--dark);}
 .column h3 {font-size: 15px; margin: 0px; text-align: center; font-style: italic; font-weight: 100; margin-bottom: 5px; color: var(--dark);}
