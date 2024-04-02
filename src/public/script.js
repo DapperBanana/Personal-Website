@@ -5,7 +5,7 @@ let clientX, clientY;
 let lastSentX, lastSentY;
 let serverPositions;
 
-const ws = new WebSocket('wss://austinlhoward.duckdns.org');
+const ws = new WebSocket('wss://austinlhoward.com');
 const userId = generateUserID(); // Unique user ID
 const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
 const root = document.documentElement;
@@ -75,6 +75,7 @@ ws.onmessage = (event) => {
     
     if (data.type === 'clientCount') {
         document.getElementById('currently-online').innerText = data.count;
+        document.getElementById('total-site-visits').innerText = data.totalCount;
     } else if (data.type === 'blogLinks') {
         // Ignore data for blog links
     } else {

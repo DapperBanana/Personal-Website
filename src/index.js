@@ -12,6 +12,7 @@ const options = {
 };
 const server = https.createServer(options, app);
 const wss = new WebSocket.Server({ server });
+const ipDataFilePath = 'src/ip_data.json';
 
 
 let clientCount = 0;
@@ -22,6 +23,42 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Mount the routes
 app.use('/', routes);
+
+// Middleware to parse JSON
+app.use(express.json());
+
+// Handle POST requests to "/"
+app.post('/', (req, res) => {
+  const clientIP = req.body.ip; // Extract client IP from the request body
+  const clientCountry = req.body.country; // Extract client country from the request body
+  
+  // Read existing IP data from the file
+  fs.readFile(ipDataFilePath, 'utf8', (err, data) => {
+      if (err) {
+          console.error('Error reading IP data file:', err);
+          res.status(500).send('Error reading IP data file');
+          return;
+      }
+
+      let ipData = JSON.parse(data);
+
+      // Update total IP count
+      ipData.Total = (ipData.Total || 0) + 1;
+
+      // Update country-specific IP count
+      ipData[clientCountry] = (ipData[clientCountry] || 0) + 1;
+
+      // Write updated IP data back to the file
+      fs.writeFile(ipDataFilePath, JSON.stringify(ipData, null, 2), 'utf8', (err) => {
+          if (err) {
+              console.error('Error writing IP data file:', err);
+              res.status(500).send('Error writing IP data file');
+              return;
+          }
+          res.sendStatus(200);
+      });
+  });
+});
 
 // Serve blog links
 app.get('/blogLinks', (req, res) => {
@@ -77,6 +114,20 @@ function getYearFromMarkdownFile(filePath) {
   }
 }
 
+// Function to read total count from ip_data.json
+function readTotalCount(callback) {
+  fs.readFile(ipDataFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading IP data file:', err);
+      callback(0); // Return 0 if file read fails
+      return;
+    }
+    const ipData = JSON.parse(data);
+    const totalCount = ipData && ipData.Total ? ipData.Total : 0;
+    callback(totalCount);
+  });
+}
+
 function getRestOfDateFromMarkdownFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -99,11 +150,7 @@ const clients = new Map();
 
 // WebSocket connection handler
 wss.on('connection', (ws, req) => {
-  console.log('Client connected');
   clientCount++;
-  let clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  clientIP = clientIP.split(',')[0].trim();
-  console.log(`Client connected from IP: ${clientIP}`);
   // Handle incoming messages (mouse position data)
   ws.on('message', (data) => {
     
@@ -134,10 +181,21 @@ wss.on('connection', (ws, req) => {
     });
   }  
   function broadcastClientCount() {
-    wss.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(JSON.stringify({ type: 'clientCount', count: clientCount }));
+    let totalCount = 0;
+    fs.readFile(ipDataFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading IP data file:', err);
+        totalCount = 0; // Set total count to 0 if file read fails
+      } else {
+        const ipData = JSON.parse(data);
+        totalCount = ipData && ipData.Total ? ipData.Total : 0;
       }
+
+      wss.clients.forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify({ type: 'clientCount', count: clientCount, totalCount: totalCount }));
+        }
+      });
     });
   }
   // Initial broadcast of mouse positions to the newly connected client
