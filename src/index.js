@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./routes/index.js');
 const https = require('https');
+const MarkdownIt = require('markdown-it');
 const WebSocket = require('ws');
 const path = require('path');
 const fs = require('fs');
@@ -13,7 +14,11 @@ const options = {
 const server = https.createServer(options, app);
 const wss = new WebSocket.Server({ server });
 const ipDataFilePath = 'src/ip_data.json';
-
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+});
 
 let clientCount = 0;
 
@@ -57,6 +62,37 @@ app.post('/', (req, res) => {
           }
           res.sendStatus(200);
       });
+  });
+});
+
+app.get('/blogWebpage', (req, res) => {
+  const blogFolderPath = path.join(__dirname, '/public/blog-posts/');
+  const blogPage = req.body.blogPage;
+  const blogFilePath = path.join(blogFolderPath, blogPage);
+  const templateFilePath = path.join(__dirname, 'blogTEMPLATE.html');
+  fs.readFile(blogFilePath, 'utf-8', (err, markdownContent) => {
+    if (err) {
+      console.error('Error reading blog file:', err);
+      res.status(500).send('Error reading blog file');
+      return;
+    }
+
+    const htmlContent = md.render(markdownContent);
+
+    fs.readFile(templateFilePath, 'utf-8', (err, templateContent) => {
+      if (err) {
+        console.error('Error reading template file:', err);
+        res.status(500).send('Error reading template file');
+        return;
+      }
+
+      const finalHtml = templateContent.replace(
+        '<div class="content"></div>',
+        `<div class="content">${htmlContent}</div>`
+      );
+
+      res.send(finalHtml);
+    });
   });
 });
 

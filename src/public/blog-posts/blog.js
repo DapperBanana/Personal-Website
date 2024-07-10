@@ -70,7 +70,7 @@ async function createBlogPostList() {
             postWrapper.className = 'post';
             const postTitle = document.createElement('h2');
             const postLink = document.createElement('a');
-            postLink.href = post.link;
+            postLink.href = `/blogWebpage?blogPage=${post.link}`;
             postTitle.textContent = post.title;
             postLink.appendChild(postTitle);
 
