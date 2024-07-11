@@ -8,12 +8,12 @@ const fs = require('fs');
 
 const app = express();
 const options = {
-  key: fs.readFileSync('src/private.key'),
-  cert: fs.readFileSync('src/certificate.crt'),
+  key: fs.readFileSync('src/private/private.key'),
+  cert: fs.readFileSync('src/private/certificate.crt'),
 };
 const server = https.createServer(options, app);
 const wss = new WebSocket.Server({ server });
-const ipDataFilePath = 'src/ip_data.json';
+const ipDataFilePath = 'src/private/ip_data.json';
 const md = new MarkdownIt({
   html: true,
   linkify: true,
@@ -66,8 +66,8 @@ app.post('/', (req, res) => {
 });
 
 app.get('/blogWebpage', (req, res) => {
-  const blogFolderPath = path.join(__dirname, '/public/blog-posts/');
-  const blogPage = req.body.blogPage;
+  const blogFolderPath = path.join(__dirname, '/public');
+  const blogPage = req.query.blogPage;
   const blogFilePath = path.join(blogFolderPath, blogPage);
   const templateFilePath = path.join(__dirname, 'blogTEMPLATE.html');
   fs.readFile(blogFilePath, 'utf-8', (err, markdownContent) => {
