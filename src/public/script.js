@@ -14,6 +14,8 @@ const root = document.documentElement;
 // ...Maybe someday!
 if (isDarkModeEnabled) {
     root.style.setProperty('--dark-mode', 'true');
+    root.style.setProperty('--code-background', '#00495C');
+    root.style.setProperty('--code-border', '#0085A8');
     root.style.setProperty('--light', '#002B36');//'#110B11');
     root.style.setProperty('--dark', '#E6E8E6');
     root.style.setProperty('--grey', '#495867');
@@ -33,6 +35,8 @@ if (isDarkModeEnabled) {
     root.style.setProperty('--home-page-margin', '0px');
 } else {
     root.style.setProperty('--dark-mode', 'false');
+    root.style.setProperty('--code-background', '#d9dad9');
+    root.style.setProperty('--code-border', '#fcfffc');
     root.style.setProperty('--light', '#E6E8E6');
     root.style.setProperty('--dark', '#092327');
     root.style.setProperty('--grey', '#9C9DA1');

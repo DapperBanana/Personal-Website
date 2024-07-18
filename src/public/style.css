@@ -26,6 +26,8 @@ body { min-height: 100vh; }
   --home-page-margin: 10px;
 
   /* COLORS */
+  --code-background:      #d9dad9;
+  --code-border:          #fcfffc;
   --light:                #E6E8E6;
   --dark:                 #092327;
   --grey:                 #9C9DA1;

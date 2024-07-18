@@ -17,3 +17,5 @@ body {background-color: var(--light); color: var(--dark); font-family: 'Inconsol
         .post h2:hover {color: var(--light); transition: 0.3s ease-in-out;  padding: 3px;}
         .post a {color: var(--dark); text-decoration: none;}
         .post p {font-family:Arial, Helvetica, sans-serif;font-size: 10px; font-weight: 100; margin: 2px; color: var(--grey)}
+
+pre {background-color: var(--code-background); border: var(--code-border); border-radius: 6px; margin: 10px; padding: 10px; width: fit-content;}
