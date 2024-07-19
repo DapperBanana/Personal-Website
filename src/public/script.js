@@ -51,9 +51,14 @@ if (isDarkModeEnabled) {
     root.style.setProperty('--invert-percentage', '100%');
     root.style.setProperty('--about-page-background', 'url("/assets/adam-and-i.png")');
     root.style.setProperty('--main-page-background', 'url("/assets/pretentious-headshot.png")');
-    root.style.setProperty('--vh', '60vh');
-    root.style.setProperty('--vw', '60vw');
     root.style.setProperty('--home-page-margin', '10px');
+    if (viewportWidth < 940) {
+        root.style.setProperty('--vh', '0vh');
+        root.style.setProperty('--vw', '0vw');
+    } else {
+        root.style.setProperty('--vh', '60vh');
+        root.style.setProperty('--vw', '60vw');
+    }
 }
 
 
@@ -157,6 +162,9 @@ function cleanupDisconnectedPointers(serverPositions) {
 
 // Function to toggle dark mode
 function toggleDarkMode() {
+
+    const viewportWidth = window.innerWidth;
+
     // Get the root element
     const root = document.documentElement;
 
@@ -182,9 +190,14 @@ function toggleDarkMode() {
         root.style.setProperty('--invert-percentage', '100%');
         root.style.setProperty('--about-page-background', 'url("/assets/adam-and-i.png")');
         root.style.setProperty('--main-page-background', 'url("/assets/pretentious-headshot.png")');
-        root.style.setProperty('--vh', '60vh');
-        root.style.setProperty('--vw', '60vw');
         root.style.setProperty('--home-page-margin', '10px');
+        if (viewportWidth < 940) {
+            root.style.setProperty('--vh', '0vh');
+            root.style.setProperty('--vw', '0vw');
+        } else {
+            root.style.setProperty('--vh', '60vh');
+            root.style.setProperty('--vw', '60vw');
+        }
 
     } else {
         root.style.setProperty('--dark-mode', 'true');
@@ -228,7 +241,23 @@ function handleViewportResize() {
     // Recalculate viewport dimensions
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    
+
+    // Access the root element
+    const root = document.documentElement;
+
+    // Check if currently in dark mode
+    const isLightMode = root.style.getPropertyValue('--dark-mode') == 'false';
+
+    // Check if the width is less than 940px and in light mode
+    if (isLightMode){
+        if (viewportWidth < 940) {
+            root.style.setProperty('--vh', '0vh');
+            root.style.setProperty('--vw', '0vw');
+        } else {
+            root.style.setProperty('--vh', '60vh');
+            root.style.setProperty('--vw', '60vw');
+        }
+    }
     // Return the updated viewport dimensions
     return { viewportWidth, viewportHeight };
 }
