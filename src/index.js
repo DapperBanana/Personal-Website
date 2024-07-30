@@ -1,19 +1,19 @@
 const express = require('express');
 const routes = require('./routes/index.js');
-//const https = require('https');
-const http = require('http');
+const https = require('https');
+//const http = require('http');
 const MarkdownIt = require('markdown-it');
 const WebSocket = require('ws');
 const path = require('path');
 const fs = require('fs');
 
 const app = express();
-//const options = {
-//  key: fs.readFileSync('src/private/private.key'),
-//  cert: fs.readFileSync('src/private/certificate.crt'),
-//};
-//const server = https.createServer(options, app);
-const server = http.createServer(app);
+const options = {
+  key: fs.readFileSync('src/private/private.key'),
+  cert: fs.readFileSync('src/private/certificate.crt'),
+};
+const server = https.createServer(options, app);
+//const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 const ipDataFilePath = 'src/private/ip_data.json';
 const md = new MarkdownIt({
